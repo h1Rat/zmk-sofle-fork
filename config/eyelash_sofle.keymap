@@ -38,6 +38,101 @@
     };
 
     behaviors {
+        jis_n2: jis_n2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_n6: jis_n6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_n7: jis_n7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp LS(N6)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_n8: jis_n8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp LS(APOS)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_n9: jis_n9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp LS(N8)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_n0: jis_n0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp LS(N9)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_semi: jis_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_apos: jis_apos {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp LS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_bslh: jis_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp INT1>, <&kp LS(INT3)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_minus: jis_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(INT1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_equal: jis_equal {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(MINUS)>, <&kp LS(SEMI)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_grv: jis_grv {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(EQUAL)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -101,7 +196,7 @@
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
 &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&to 0      &to 3         &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
             display-name = "layer2";
@@ -110,27 +205,40 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC     &kp N1     &jis_n2     &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &jis_n6  &jis_n7  &jis_n8  &jis_n9       &jis_n0       &kp BACKSPACE
+&kp TAB     &kp Q      &kp W       &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y    &kp U    &kp I    &kp O         &kp P         &jis_bslh
+&kp CAPS    &kp A      &kp S       &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H    &kp J    &kp K    &kp L         &jis_semi     &jis_apos
+&kp LSHFT   &kp Z      &kp X       &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N    &kp M    &kp COMMA  &kp DOT       &kp FSLH      &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 4   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 5      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
-            display-name = "layer3";
+            display-name = "jis_base";
             sensor-bindings = <&scroll_encoder>;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&jis_grv   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10          &trans
+&trans     &jis_grv         &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &jis_minus       &jis_equal
+&trans     &kp LS(EQUAL)    &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp RIGHT_BRACKET  &kp NON_US_HASH
+&trans     &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12          &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer4";
+            display-name = "jis_fn";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&kp LS(EQUAL)  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
+&trans         &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp LS(INT1)  &kp LS(SEMI)
+&trans         &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LS(RIGHT_BRACKET)  &kp LS(NON_US_HASH)
+&trans         &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
+&to 0          &to 3         &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+            >;
+
+            display-name = "jis_sys";
             sensor-bindings = <&scroll_encoder>;
         };
     };

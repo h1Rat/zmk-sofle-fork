@@ -43,7 +43,6 @@
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LEFT_BRACKET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_n6: jis_n6 {
@@ -51,7 +50,6 @@
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_n7: jis_n7 {
@@ -59,7 +57,6 @@
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp LS(N6)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_n8: jis_n8 {
@@ -67,7 +64,6 @@
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp LS(APOS)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_n9: jis_n9 {
@@ -75,7 +71,6 @@
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LS(N8)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_n0: jis_n0 {
@@ -83,7 +78,6 @@
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp LS(N9)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_semi: jis_semi {
@@ -91,7 +85,6 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_apos: jis_apos {
@@ -99,7 +92,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(N7)>, <&kp LS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_bslh: jis_bslh {
@@ -107,7 +99,6 @@
             #binding-cells = <0>;
             bindings = <&kp INT1>, <&kp LS(INT3)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_minus: jis_minus {
@@ -115,7 +106,6 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp LS(INT1)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_equal: jis_equal {
@@ -123,7 +113,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(MINUS)>, <&kp LS(SEMI)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jis_grv: jis_grv {
@@ -131,7 +120,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(EQUAL)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
